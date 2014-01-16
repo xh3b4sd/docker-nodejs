@@ -1,12 +1,11 @@
-
 #
 # Node.js v0.11.10
 #
 # VERSION 0.0.1
 #
 
-FROM ubuntu:12.10
-MAINTAINER Marcus André <hello@marcusandre.de>
+FROM stackbrew/ubuntu:12.04
+MAINTAINER Tim Schindler <tim@catalyst-zero.com>
 
 #
 # Update OS
@@ -35,10 +34,5 @@ RUN cd /usr/src/node && git checkout v0.11.10 && ./configure && make && make ins
 
 RUN rm -fr /usr/src/node
 
-#
-# Entry
-#
 
-CMD ["/bin/bash"]
-
-# Usage: docker run -t -i $IMAGE
+# Usage: docker run -t -i $IMAGE /bin/bash
